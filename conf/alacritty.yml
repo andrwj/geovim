@@ -3,42 +3,42 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: alacritty
+  TERM: xterm-256color
 
-#window:
+window:
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 130
+    lines: 44
 
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
   # If the position is not set, the window manager will handle the placement.
-  #position:
-  #  x: 0
-  #  y: 0
+  position:
+    x: 0
+    y: 0
 
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 0
-  #  y: 0
+  padding:
+    x: 15
+    y: 15
 
   # Spread additional padding evenly around the terminal content.
-  #dynamic_padding: false
+  dynamic_padding: false
 
   # Window decorations
   #
@@ -49,7 +49,7 @@
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  #decorations: full
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -60,10 +60,10 @@
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  startup_mode: Windowed
 
   # Window title
-  #title: Alacritty
+  title: GeoVIM
 
   # Window class (Linux/BSD only):
   #class:
@@ -90,31 +90,31 @@
 # Font configuration
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    #family: monospace
+    family: Noto Sans Mono CJK KR
   # Nerd Fonts patch fonts to include icon glyphs. Install a nerd font and put
   # the name here to use
   # family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    # style: Regular
 
   # Bold font face
-  #bold:
+  bold:
     # Font family
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: monospace
+    family: Noto Sans Mono CJK KR
 
     # The `style` can be specified to pick a specific face.
-    #style: Bold
+    style: Bold
 
   # Italic font face
   #italic:
@@ -139,7 +139,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -171,30 +171,30 @@ font:
   use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: true
 
 # Colors (Tomorrow Night Bright)
-# colors:
+colors:
   # Default colors
-  #primary:
-  #  background: '#000000'
-  #  foreground: '#eaeaea'
+  primary:
+    background: '#272936'
+    foreground: '#EAEAEA'
 
     # Bright and dim foreground colors
     #
     # The dimmed foreground color is calculated automatically if it is not present.
     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
     # is `false`, the normal foreground color will be used.
-    #dim_foreground: '#9a9a9a'
-    #bright_foreground: '#ffffff'
+    dim_foreground: '#9a9a9a'
+    bright_foreground: '#ffffff'
 
   # Cursor colors
   #
   # Colors which should be used to draw the terminal cursor. If these are unset,
   # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '#000000'
-  #  cursor: '#ffffff'
+  cursor:
+    text: '#000000'
+    cursor: '#D009B7'
 
   # Selection colors
   #
@@ -272,41 +272,41 @@ font:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-#visual_bell:
-#  animation: EaseOutExpo
-#  duration: 0
-#  color: '#ffffff'
+visual_bell:
+  animation: EaseOutExpo
+  duration: 1
+  color: '#ffffff'
 
 # Background opacity
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+background_opacity: 1.0
 
-#selection:
-  #semantic_escape_chars: ",│`|:\"' ()[]{ }<>\t"
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{ }<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
-  #save_to_clipboard: false
+  save_to_clipboard: true
 
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+dynamic_title: true
 
-#cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
+  style: Block
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow: true
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
-#live_config_reload: true
+live_config_reload: true
 
 # Shell
 #
@@ -341,7 +341,7 @@ font:
 # Send ESC (\x1b) before characters when alt is pressed.
 #alt_send_esc: true
 
-#mouse:
+mouse:
   # Click settings
   #
   # The `double_click` and `triple_click` settings control the time
@@ -351,9 +351,9 @@ font:
   #triple_click: { threshold: 300 }
 
   # If this is `true`, the cursor is temporarily hidden when typing.
-  #hide_when_typing: false
+  hide_when_typing: true
 
-  #url:
+  url:
     # URL launcher
     #
     # This program is executed when clicking on a text which is recognized as a URL.
@@ -365,8 +365,8 @@ font:
     #   - (macOS) open
     #   - (Linux/BSD) xdg-open
     #   - (Windows) explorer
-    #launcher:
-    #  program: xdg-open
+    launcher:
+      program: open
     #  args: []
 
     # URL modifiers
@@ -505,44 +505,57 @@ font:
 # at once.
 key_bindings:
   - { key: Comma,     mods: Command,      command:
-        {program: "open", args: ["~/.config/alacritty/alacritty.yml"] } }
+        {program: "open", args: ["~/.config/geovim/conf/alacritty.yml"] } }
   - { key: N,         mods: Command,      action: SpawnNewInstance }
   - { key: Space,     mods: Alt,          chars: " " }
+
   # Sends <M-'> to comment/uncomment lines
   - { key: Apostrophe,        mods: Command, chars: "\x1b'" }
+
   # Sends <M-]> and <M-[> for indenting lines
   - { key: LBracket,        mods: Command, chars: "\x1b[" }
   - { key: RBracket,        mods: Command, chars: "\x1b]" }
+
   # Mapped to Ctrl+S which saves in Vim
   - { key: S,        mods: Command, chars: "\x1b:w\x0d" }
+
   # Sends <C-S-Insert> for Select All
   - { key: A,        mods: Command, chars: "\x1b[2;6~" }
+
   # Sends <C-Insert> for Paste, and Copy is sent as a custom escape
   # sequence
   - { key: V,        mods: Command, chars: "\x1b[2;5~" }
   - { key: C,        mods: Command, chars: "\x1b[2;5+" }
   - { key: X,        mods: Command, chars: "x" }
+
   # Send <Esc>:tabp<Return> for tab switching
   - { key: LBracket,        mods: Shift|Command, chars: "\x1b:tabp\x0d" }
   - { key: RBracket,        mods: Shift|Command, chars: "\x1b:tabn\x0d" }
+
   # Send <Esc>:tabenew<Return> to create a new tab in Vim
   - { key: T,        mods: Command, chars: "\x1b:tabnew\x0d" }
+
   # Send <Esc>:q<Return> to Vim
   - { key: W,        mods: Command, chars: "\x1b:q\x0d" }
+
   # Send Ctrl+A Meta+W (Meta is sent as ^[) to TMUX, which issues further Vim
   # commands, and send <Esc> :qa <Return> in case TMUX isn't running
   - { key: Q,      mods: Command,         chars: "\x01\x1bW\x1bq" }
   - { key: Q,      mods: Command|Shift,         chars: "\x01\x11\x1b[qa!" }
+
   # Quits Alacritty (will leave TMUX running)
   # - { key: Q,   mods: Shift|Command,         action: Quit }
+
   # Sends Ctrl+A Ctrl+L which is mapped to clear lines in TMUX
   - { key: K,      mods: Command,         chars: "\x01\x0c" }
   - { key: Return,   mods: Command,           action: ToggleFullscreen }
+
   # Keep these to allow Copy+Paste in non-Vim areas (TMUX commands, terminal)
   - { key: V,        mods: Control|Shift, action: Paste }
   - { key: C,        mods: Control|Shift, action: Copy }
+
   # Bonus key mappings follow this pattern in Vim bindings
-  #		<C-S-Enter> becomes C-S<Enter>
+  #      <C-S-Enter> becomes C-S<Enter>
   # This is due to terminals not being able to distinguish between certain Modifer+Key combos
   # --------
   - { key: Return,        mods: Control, chars: "C\x0d" }
@@ -605,8 +618,7 @@ key_bindings:
   # Print all received window events.
   #print_events: false
   #
-# shell:
-#   program: /usr/local/bin/zsh
-#   args:
-#     - -c
-#     - TERM="" nvim
+shell:
+   program: /usr/local/bin/zsh
+   args:
+     - --login
