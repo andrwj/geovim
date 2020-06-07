@@ -97,6 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
+    # family: SpaceMono NF
     family: Noto Sans Mono CJK KR
   # Nerd Fonts patch fonts to include icon glyphs. Install a nerd font and put
   # the name here to use
@@ -111,6 +112,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
+    # family: SpaceMono NF
     family: Noto Sans Mono CJK KR
 
     # The `style` can be specified to pick a specific face.
