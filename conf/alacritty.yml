@@ -98,7 +98,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     # family: SpaceMono NF
-    family: Noto Sans Mono CJK KR
+    family: 'SpaceMono NF'
   # Nerd Fonts patch fonts to include icon glyphs. Install a nerd font and put
   # the name here to use
   # family: Hack Nerd Font Mono
